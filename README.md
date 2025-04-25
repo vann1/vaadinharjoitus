@@ -1,2 +1,3 @@
 # Vaadinharjoitus
 
+![Kuva](testi.png)
