@@ -5,7 +5,9 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 import java.util.Optional;
 
-public interface MeasurementRepository  extends JpaRepository<Measurement, Long>, JpaSpecificationExecutor<Measurement> {
+public interface MeasurementRepository  extends
+        JpaRepository<Measurement, Long>,
+        JpaSpecificationExecutor<Measurement> {
 
     Optional<Measurement> findByMeasurementName(String measurementName);
 }

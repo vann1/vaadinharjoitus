@@ -1,10 +1,15 @@
 vaadin-scroller[slot="drawer"] {
   padding: var(--lumo-space-s);
+  background-color: rgba(120, 157, 195, 0.35);
 }
+
+
 
 vaadin-side-nav-item vaadin-icon {
   padding: 0;
+
 }
+
 
 [slot="drawer"]:is(header, footer) {
   display: flex;
@@ -13,8 +18,12 @@ vaadin-side-nav-item vaadin-icon {
   padding: var(--lumo-space-s) var(--lumo-space-m);
   min-height: var(--lumo-size-xl);
   box-sizing: border-box;
+  background-color: rgba(120, 157, 195, 0.35);
+
+
 }
 
 [slot="drawer"]:is(header, footer):is(:empty) {
   display: none;
+
 }

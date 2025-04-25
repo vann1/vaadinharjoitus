@@ -42,6 +42,7 @@ public class MainLayout extends AppLayout {
     private AccessAnnotationChecker accessChecker;
 
     public MainLayout(AuthenticatedUser authenticatedUser, AccessAnnotationChecker accessChecker) {
+        addClassNames("main-layout");
         this.authenticatedUser = authenticatedUser;
         this.accessChecker = accessChecker;
 
@@ -62,7 +63,7 @@ public class MainLayout extends AppLayout {
 
     private void addDrawerContent() {
         Span appName = new Span("Vaadinharjoitus");
-        appName.addClassNames(LumoUtility.FontWeight.SEMIBOLD, LumoUtility.FontSize.LARGE);
+        appName.addClassNames(LumoUtility.FontWeight.SEMIBOLD, LumoUtility.FontSize.LARGE, LumoUtility.FontWeight.BOLD, LumoUtility.TextColor.PRIMARY);
         Header header = new Header(appName);
 
         Scroller scroller = new Scroller(createNavigation());
@@ -116,6 +117,7 @@ public class MainLayout extends AppLayout {
             layout.add(userMenu);
         } else {
             Anchor loginLink = new Anchor("login", "Sign in");
+            loginLink.addClassNames("loginLink");
             layout.add(loginLink);
         }
 

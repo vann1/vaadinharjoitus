@@ -1,2 +1,4 @@
 @import url('./main-layout.css');
 @import url('./views/admin-view.css');
+@import url('./components/filters-component.css');
+@import url('./views/main-view.css');

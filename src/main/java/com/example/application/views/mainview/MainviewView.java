@@ -11,6 +11,8 @@ import com.vaadin.flow.server.auth.AnonymousAllowed;
 import com.vaadin.flow.theme.lumo.LumoUtility.Margin;
 import org.vaadin.lineawesome.LineAwesomeIconUrl;
 
+import java.awt.*;
+
 @PageTitle("mainview")
 @Route("")
 @Menu(order = 0, icon = LineAwesomeIconUrl.FILE)
@@ -18,16 +20,17 @@ import org.vaadin.lineawesome.LineAwesomeIconUrl;
 public class MainviewView extends VerticalLayout {
 
     public MainviewView() {
+        addClassNames("main-view");
         setSpacing(false);
 
-        Image img = new Image("images/empty-plant.png", "placeholder plant");
-        img.setWidth("200px");
+        Image img = new Image("images/Untitled.png", "placeholder plant");
+        img.setWidth("700px");
         add(img);
 
-        H2 header = new H2("This place intentionally left empty");
-        header.addClassNames(Margin.Top.XLARGE, Margin.Bottom.MEDIUM);
+        H2 header = new H2("Please sign in as A user/user to see useradmin view or admin/admin to see admin view and the rest");
+        header.addClassNames("main-view-header");
+        header.getStyle().set("font-size", "20px");
         add(header);
-        add(new Paragraph("It’s a place where you can grow your own UI 🤗"));
 
         setSizeFull();
         setJustifyContentMode(JustifyContentMode.CENTER);
