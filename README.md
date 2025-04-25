@@ -1,3 +1,3 @@
 # Vaadinharjoitus
 
-![Kuva](testi.png)
+![Kuva](testi.PNG)
