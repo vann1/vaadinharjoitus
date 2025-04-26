@@ -24,9 +24,7 @@ public class User extends AbstractEntity {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Measurement> measurements;
 
-    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "patient_overview_id", unique = true)
-    private PatientOverview patientOverview;
+
 
     public String getUsername() {
         return username;
@@ -66,4 +64,6 @@ public class User extends AbstractEntity {
     public void setMeasurements(List<Measurement> measurements) {
         this.measurements = measurements;
     }
+
+
 }

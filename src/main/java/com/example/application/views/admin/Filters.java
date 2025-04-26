@@ -23,9 +23,9 @@ public class Filters extends Div implements Specification<Measurement> {
 
     private TextField user = new TextField("Patient name");
 
-    private Button searchButton = new Button("");
+    private Button searchButton = new Button("Search");
 
-    private Button clearButton = new Button("");
+    private Button clearButton = new Button("Clear");
 
     public Filters(Runnable onSearch) {
         addClassNames("filters-component");

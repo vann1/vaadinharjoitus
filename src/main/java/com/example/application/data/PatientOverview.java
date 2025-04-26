@@ -1,8 +1,6 @@
 package com.example.application.data;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -14,7 +12,8 @@ public class PatientOverview extends AbstractEntity{
     private String medications;
     private String bloodType;
 
-    @OneToOne(mappedBy = "patientOverview")
+    @OneToOne()
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
 
     public User getUser() {

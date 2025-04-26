@@ -2,20 +2,19 @@ package com.example.application.views.mainview;
 
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Image;
-import com.vaadin.flow.component.html.Paragraph;
+
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Menu;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
-import com.vaadin.flow.theme.lumo.LumoUtility.Margin;
 import org.vaadin.lineawesome.LineAwesomeIconUrl;
 
 import java.awt.*;
 
-@PageTitle("mainview")
+@PageTitle("Main view")
 @Route("")
-@Menu(order = 0, icon = LineAwesomeIconUrl.FILE)
+@Menu(order = 1, icon = LineAwesomeIconUrl.DRAGON_SOLID)
 @AnonymousAllowed
 public class MainviewView extends VerticalLayout {
 

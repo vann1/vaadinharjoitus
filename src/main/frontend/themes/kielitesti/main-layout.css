@@ -10,6 +10,28 @@ vaadin-side-nav-item vaadin-icon {
 
 }
 
+.login-link {
+  background-image: url("/images/Buttonbackground.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 85px;
+  height: 37px;
+  align-content: center;
+  text-align: center;
+  font-weight: bold;
+}
+.login-link:hover {
+  text-decoration: none;
+}
+
+vaadin-button {
+  font-weight: bold;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("/images/Buttonbackground.png");
+}
 
 [slot="drawer"]:is(header, footer) {
   display: flex;

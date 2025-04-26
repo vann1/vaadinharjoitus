@@ -2,6 +2,9 @@ package com.example.application.services;
 
 import com.example.application.data.User;
 import com.example.application.data.UserRepository;
+
+import java.util.Collections;
+import java.util.List;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -41,4 +44,36 @@ public class UserService {
         return (int) repository.count();
     }
 
+    public Boolean userNameAvailable(String username) {
+        return repository.findByUsername(username).isEmpty();
+    }
+
+    public List<User> getUsers() {
+        return this.repository.findAll();
+    }
+
+    public List<User> searchUsersByName(String filter) {
+        if (filter == null || filter.isEmpty()) {
+            return repository.findAll();
+        }
+        return repository.findByUsernameContainingIgnoreCase(filter);
+    }
+
+    public int countUsersByName(String filter) {
+        if (filter == null || filter.isEmpty()) {
+            return (int) repository.count();
+        }
+        return repository.countByUsernameContainingIgnoreCase(filter);
+    }
+
+    public User findByName(String name) {
+        return this.repository.findUserByName(name);
+    }
+
+    public List<User> findByNameStartingWith(String name) {
+        if (name == null || name.isEmpty()) {
+            return Collections.emptyList();
+        }
+        return repository.findByNameStartingWithIgnoreCase(name);
+    }
 }
